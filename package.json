@@ -1,0 +1,28 @@
+{
+  "name": "pixelslim",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight native desktop image optimizer and format converter",
+  "scripts": {
+    "start": "tauri dev",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "build:universal": "tauri build --target universal-apple-darwin"
+  },
+  "keywords": [
+    "pixelslim",
+    "image-shrinker",
+    "webp",
+    "svg",
+    "png",
+    "jpeg",
+    "tauri",
+    "rust"
+  ],
+  "author": "ZeoSpec",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@tauri-apps/api": "^2.11.1",
+    "@tauri-apps/cli": "^2.11.4"
+  }
+}

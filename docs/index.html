@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO Meta -->
+  <title>PixelSlim | Native Batch Image Optimizer and Converter for macOS</title>
+  <meta name="title" content="PixelSlim | Native Batch Image Optimizer and Converter for macOS" />
+  <meta name="description"
+    content="PixelSlim is an ultra-fast, 100% offline batch image optimizer and format converter for macOS. Convert WebP, AVIF, PNG, JPEG, and SVG with native Rust speed in a lightweight Universal DMG." />
+  <meta name="keywords"
+    content="image optimizer macos, batch image converter mac, webp converter mac, avif converter mac, offline image compressor, rust tauri mac app, tinypng alternative mac, png compressor, mozjpeg optimizer, svg minifier mac, privacy friendly image optimizer" />
+  <meta name="author" content="ZeoSpec" />
+  <meta name="theme-color" content="#f8fafc" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://pixelslim.zeospec.com/" />
+
+  <!-- Open Graph / Facebook / WhatsApp / iMessage -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PixelSlim" />
+  <meta property="og:title" content="PixelSlim | Batch Image Optimizer for macOS" />
+  <meta property="og:description"
+    content="Batch compress, resize, and convert images into WebP, AVIF, PNG, JPEG, and SVG. 100% offline, native Rust speed, free Universal macOS app." />
+  <meta property="og:url" content="https://pixelslim.zeospec.com/" />
+  <meta property="og:image" content="https://pixelslim.zeospec.com/assets/og-preview.jpg" />
+  <meta property="og:image:secure_url" content="https://pixelslim.zeospec.com/assets/og-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+  <meta property="og:image:alt" content="PixelSlim | Batch Image Optimizer for macOS" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ZeoSpec" />
+  <meta name="twitter:creator" content="@ZeoSpec" />
+  <meta name="twitter:title" content="PixelSlim | Batch Image Optimizer for macOS" />
+  <meta name="twitter:description"
+    content="Batch compress, resize, and convert images into WebP, AVIF, PNG, JPEG, and SVG. Native Rust speed, 100% offline, free Universal macOS app." />
+  <meta name="twitter:image" content="https://pixelslim.zeospec.com/assets/og-preview.webp" />
+  <meta name="twitter:image:alt" content="PixelSlim | Batch Image Optimizer for macOS" />
+
+  <!-- Mobile & Web Application Capabilities -->
+  <meta name="application-name" content="PixelSlim" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="PixelSlim" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" sizes="512x512" href="assets/icon-512.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://pixelslim.zeospec.com/#software",
+        "name": "PixelSlim",
+        "description": "PixelSlim is an ultra-fast, offline batch image optimizer and format converter built natively for macOS with Rust and Tauri v2. Supports WebP, AVIF, PNG, JPEG, and SVG conversion.",
+        "operatingSystem": "macOS 11.0 or later (Apple Silicon M1/M2/M3/M4 and Intel)",
+        "applicationCategory": "MultimediaApplication",
+        "applicationSubCategory": "Image Optimizer",
+        "softwareVersion": "1.0.0",
+        "downloadUrl": "https://github.com/zeospec/PixelSlim/releases/latest/download/PixelSlim_1.0.0_universal.dmg",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "ZeoSpec",
+          "url": "https://zeospec.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ZeoSpec",
+          "url": "https://zeospec.com"
+        },
+        "license": "https://opensource.org/licenses/MIT",
+        "featureList": [
+          "Universal macOS Binary (Apple Silicon and Intel)",
+          "Next-Gen WebP and AVIF format conversion",
+          "Lossless and lossy PNG and MozJPEG batch compression",
+          "SVG vector minification and raster tracing",
+          "100% offline image processing with zero cloud tracking",
+          "Automated EXIF and GPS privacy sanitization",
+          "Smart, Target Size, and Custom Quality tuning modes",
+          "Under 250ms startup time and ~40 MB RAM usage",
+          "Instant drag-and-drop and clipboard paste (Cmd+V)"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pixelslim.zeospec.com/#website",
+        "url": "https://pixelslim.zeospec.com/",
+        "name": "PixelSlim",
+        "description": "The Native Image Optimizer for macOS",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ZeoSpec",
+          "url": "https://zeospec.com"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://zeospec.com/#organization",
+        "name": "ZeoSpec",
+        "url": "https://zeospec.com",
+        "logo": "https://pixelslim.zeospec.com/assets/icon-512.png"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://pixelslim.zeospec.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is PixelSlim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PixelSlim is an open-source, ultra-lightweight batch image optimizer and format converter designed natively for macOS. Built with Rust and Tauri v2, it compresses, resizes, and converts images 100% offline with instant launch (<250ms) and minimal RAM usage (~40 MB)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which image formats does PixelSlim support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PixelSlim accepts PNG, JPEG, JPG, WebP, AVIF, SVG, and GIF images, and can convert them into WebP, AVIF, PNG, JPEG, and SVG formats with customizable quality, target file sizes, and vectorization options."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is PixelSlim safe and private? Does it upload images to the cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PixelSlim is 100% private and offline. All compression and format conversion occurs locally on your Mac's hardware using native Rust libraries. Images are never uploaded to any remote server, and EXIF metadata and GPS location tags are automatically stripped to protect your privacy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does PixelSlim compare to Electron-based and web image compressors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unlike web tools (which require network bandwidth and queue times) and heavy Electron apps, PixelSlim is packaged as a lightweight native Universal DMG, uses minimal system resources, and processes batches in milliseconds."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does PixelSlim support Apple Silicon Macs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. PixelSlim is compiled as a Universal macOS binary with native support for Apple Silicon (M1, M2, M3, M4) as well as Intel-based Macs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does PixelSlim cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PixelSlim is completely free and open-source under the MIT license, created by ZeoSpec."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="light-theme">
+  <!-- Subtle Ambient Glow Orbs -->
+  <div class="glow-orb glow-indigo" aria-hidden="true"></div>
+  <div class="glow-orb glow-cyan" aria-hidden="true"></div>
+  <div class="grid-mesh" aria-hidden="true"></div>
+
+  <!-- Main Hero Layout -->
+  <main class="hero-wrapper" id="main-content">
+    <div class="hero-split">
+
+      <!-- Left Column: Branding, Story & Download -->
+      <section class="hero-text-col" aria-label="PixelSlim Introduction and Download">
+        <!-- Brand Header (App Icon, Name, Version Badge) -->
+        <header class="hero-brand-header">
+          <img src="assets/logo.png" alt="PixelSlim Native macOS App Icon" class="hero-brand-logo" width="46"
+            height="46" />
+          <div class="hero-brand-info">
+            <div class="hero-brand-title-row">
+              <span class="hero-brand-name">PixelSlim</span>
+              <span class="hero-brand-badge" aria-label="Version 1.0.0">v1.0.0</span>
+            </div>
+            <span class="hero-brand-subtitle">The Native Image Optimizer for macOS</span>
+          </div>
+        </header>
+
+        <h1 class="hero-headline">
+          High-performance batch compression, right on your Mac.
+        </h1>
+
+        <p class="hero-subtext">
+          Batch compress, resize, and convert images into <strong>WebP</strong>, <strong>AVIF</strong>,
+          <strong>PNG</strong>, <strong>JPEG</strong>, and <strong>SVG</strong> with instant drag-and-drop. Built with
+          Rust &amp; Tauri v2 for near-instant launch, tiny <strong>~40 MB RAM</strong> usage, and <strong>100% offline
+            privacy</strong>.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="cta-container">
+          <a href="https://github.com/zeospec/PixelSlim/releases/latest/download/PixelSlim_1.0.0_universal.dmg"
+            class="btn-download-primary" id="btn-primary-download"
+            aria-label="Download PixelSlim Universal DMG for macOS">
+            <div class="apple-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.99.6-2.64 1.35-.57.65-1.07 1.71-.93 2.73 1 .08 2.02-.48 2.65-1.23z" />
+              </svg>
+            </div>
+            <div class="btn-text">
+              <span class="btn-title">Download for macOS</span>
+              <span class="btn-meta">Universal DMG • Apple Silicon &amp; Intel</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/zeospec/PixelSlim" target="_blank" rel="noopener noreferrer"
+            class="btn-github-secondary" aria-label="View PixelSlim repository on GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            <span>Star on GitHub</span>
+          </a>
+        </div>
+
+        <!-- Format Capability Tags (Responsive Groups) -->
+        <div class="format-capabilities" aria-label="Supported image formats">
+          <div class="cap-group-target">
+            <span class="cap-label">Converts to:</span>
+            <span class="cap-tag">WebP</span>
+            <span class="cap-tag">AVIF</span>
+            <span class="cap-tag">PNG</span>
+            <span class="cap-tag">JPEG</span>
+            <span class="cap-tag">SVG</span>
+          </div>
+          <div class="cap-group-input">
+            <span class="cap-sep">•</span>
+            <span class="cap-input">Accepts GIF, PNG, JPG, WebP, AVIF, SVG</span>
+          </div>
+        </div>
+
+        <!-- Metric Badges Strip -->
+        <div class="specs-row" aria-label="Performance benchmarks">
+          <span class="spec-pill">⚡ &lt;250ms Launch</span>
+          <span class="spec-pill">🪶 Ultra-Lightweight</span>
+          <span class="spec-pill">🧠 Minimal RAM</span>
+          <span class="spec-pill">🔒 100% Offline &amp; Private</span>
+        </div>
+      </section>
+
+      <!-- Right Column: Application Preview -->
+      <section class="hero-preview-col" aria-label="PixelSlim macOS Application Interface Preview">
+        <div class="app-window-frame" id="product-showcase-window" title="PixelSlim for macOS">
+
+          <!-- Showcase App Header -->
+          <header class="showcase-app-header">
+            <!-- macOS Window Traffic Lights -->
+            <div class="showcase-traffic-lights" aria-hidden="true">
+              <span class="traffic-dot red"></span>
+              <span class="traffic-dot yellow"></span>
+              <span class="traffic-dot green"></span>
+            </div>
+
+            <!-- Header Main: Branding & Controls -->
+            <div class="showcase-header-main">
+              <div class="showcase-branding">
+                <div class="showcase-icon-badge">
+                  <img src="assets/logo.png" alt="PixelSlim logo" class="showcase-logo-img" width="26" height="26" />
+                </div>
+                <div class="showcase-title-block">
+                  <div class="showcase-app-title">PixelSlim</div>
+                  <span class="showcase-app-subtitle">Ultra-lightweight batch image optimizer &amp; converter</span>
+                </div>
+              </div>
+
+              <div class="showcase-right-controls">
+                <div class="showcase-theme-segmented" role="group" aria-label="Theme selector preview">
+                  <span class="showcase-theme-btn active" title="Follow macOS System Theme">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      aria-hidden="true">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x2="12" y1="17" y2="21" />
+                    </svg>
+                    <span>System</span>
+                  </span>
+                  <span class="showcase-theme-btn" title="Light Mode">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      aria-hidden="true">
+                      <circle cx="12" cy="12" r="5" />
+                      <line x1="12" y1="1" x2="12" y2="3" />
+                      <line x1="12" y1="21" x2="12" y2="23" />
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                      <line x1="1" y1="12" x2="3" y2="12" />
+                      <line x1="21" y1="12" x2="23" y2="12" />
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <span>Light</span>
+                  </span>
+                  <span class="showcase-theme-btn" title="Dark Mode">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      aria-hidden="true">
+                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <span>Dark</span>
+                  </span>
+                </div>
+
+                <div class="showcase-settings-btn" title="Preferences">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Target Format Selector -->
+            <div class="showcase-format-bar">
+              <span class="showcase-format-label">Target Format:</span>
+              <div class="showcase-format-pills">
+                <span class="showcase-pill active">Keep Original</span>
+                <span class="showcase-pill">WebP</span>
+                <span class="showcase-pill">SVG</span>
+                <span class="showcase-pill">AVIF</span>
+                <span class="showcase-pill">PNG</span>
+                <span class="showcase-pill">JPEG</span>
+              </div>
+            </div>
+          </header>
+
+          <!-- Configuration Bar -->
+          <div class="showcase-config-bar">
+            <div class="showcase-config-left">
+              <span class="showcase-config-label">SAVE TO:</span>
+              <div class="showcase-radio-group">
+                <div class="showcase-radio-item active">
+                  <span class="showcase-radio-dot"></span>
+                  <span>Same folder</span>
+                </div>
+                <div class="showcase-radio-item">
+                  <span class="showcase-radio-dot"></span>
+                  <span>Custom folder</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-config-right">
+              <div class="showcase-mode-toggle">
+                <span class="showcase-mode-btn active">✨ Smart</span>
+                <span class="showcase-mode-btn">🎯 Target Size</span>
+                <span class="showcase-mode-btn">🎛️ Custom Quality</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Queue -->
+          <div class="showcase-results-section">
+            <div class="showcase-results-header">
+              <div class="showcase-results-stats">
+                <span class="stat-highlight">4</span> processed
+                <span class="stat-divider">•</span>
+                Total saved: <span class="stat-savings">8.4 MB (78%)</span>
+              </div>
+              <div class="showcase-results-actions">
+                <span class="showcase-speed-badge">⚡ 58ms total</span>
+              </div>
+            </div>
+
+            <div class="showcase-progress-bar-container">
+              <div class="showcase-progress-bar-fill"></div>
+            </div>
+
+            <div class="showcase-queue-list">
+              <div class="showcase-queue-card">
+                <div class="card-drag-handle" title="Drag directly out into Finder, Figma, or Slack">⋮⋮</div>
+                <div class="card-icon">PNG</div>
+                <div class="card-details">
+                  <div class="card-name-row">
+                    <span class="card-filename">hero-illustration.png</span>
+                    <span class="card-format-tag">WEBP</span>
+                  </div>
+                  <div class="card-meta-row">
+                    <span>4.2 MB → <strong>840 KB</strong></span>
+                    <span class="card-savings-badge badge-positive">-80%</span>
+                    <span title="EXIF & GPS metadata safely stripped" class="privacy-tag">🛡️</span>
+                    <span class="time-meta">18ms</span>
+                  </div>
+                </div>
+                <div class="card-done-check">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.6"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="showcase-queue-card">
+                <div class="card-drag-handle" title="Drag directly out into Finder, Figma, or Slack">⋮⋮</div>
+                <div class="card-icon">PNG</div>
+                <div class="card-details">
+                  <div class="card-name-row">
+                    <span class="card-filename">product-dashboard.png</span>
+                    <span class="card-format-tag">AVIF</span>
+                  </div>
+                  <div class="card-meta-row">
+                    <span>2.8 MB → <strong>590 KB</strong></span>
+                    <span class="card-savings-badge badge-positive">-79%</span>
+                    <span title="EXIF & GPS metadata safely stripped" class="privacy-tag">🛡️</span>
+                    <span class="time-meta">22ms</span>
+                  </div>
+                </div>
+                <div class="card-done-check">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.6"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="showcase-queue-card">
+                <div class="card-drag-handle" title="Drag directly out into Finder, Figma, or Slack">⋮⋮</div>
+                <div class="card-icon">SVG</div>
+                <div class="card-details">
+                  <div class="card-name-row">
+                    <span class="card-filename">vector-logomark.svg</span>
+                    <span class="card-format-tag">SVG</span>
+                  </div>
+                  <div class="card-meta-row">
+                    <span>180 KB → <strong>48 KB</strong></span>
+                    <span class="card-savings-badge badge-positive">-73%</span>
+                    <span class="time-meta">4ms</span>
+                  </div>
+                </div>
+                <div class="card-done-check">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.6"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="showcase-queue-card">
+                <div class="card-drag-handle" title="Drag directly out into Finder, Figma, or Slack">⋮⋮</div>
+                <div class="card-icon">JPG</div>
+                <div class="card-details">
+                  <div class="card-name-row">
+                    <span class="card-filename">gallery-cover.jpg</span>
+                    <span class="card-format-tag">JPEG</span>
+                  </div>
+                  <div class="card-meta-row">
+                    <span>6.5 MB → <strong>1.2 MB</strong></span>
+                    <span class="card-savings-badge badge-positive">-81%</span>
+                    <span title="EXIF & GPS metadata safely stripped" class="privacy-tag">🛡️</span>
+                    <span class="time-meta">14ms</span>
+                  </div>
+                </div>
+                <div class="card-done-check">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.6"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Showcase App Footer -->
+          <footer class="showcase-app-footer">
+            <div class="showcase-footer-left">
+              <span class="showcase-footer-badge">PixelSlim v1.0.0</span>
+            </div>
+
+            <div class="showcase-footer-right">
+              <span class="showcase-update-dot" aria-hidden="true"></span>
+              <span>Check for Updates</span>
+            </div>
+          </footer>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Frequently Asked Questions -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="faq-header">
+        <h2 class="faq-heading" id="faq-heading">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-grid">
+        <details class="faq-card" open>
+          <summary class="faq-question">
+            <span>What makes PixelSlim faster than web compressors?</span>
+            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>PixelSlim is a native macOS application built with Rust and Tauri v2. Unlike web-based tools that require
+              uploading heavy images over the network and waiting for remote server queues, PixelSlim processes files
+              directly on your Mac's hardware using multithreaded native codecs. It launches in under 250ms and
+              optimizes images in milliseconds without network latency.</p>
+          </div>
+        </details>
+
+        <details class="faq-card">
+          <summary class="faq-question">
+            <span>Which image formats does PixelSlim convert between?</span>
+            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>PixelSlim accepts <strong>PNG, JPEG/JPG, WebP, AVIF, SVG, and GIF</strong> files, and converts them into
+              modern <strong>WebP, AVIF, PNG, JPEG, and SVG</strong> formats. It also includes vectorization tracing for
+              raster graphics and automated SVG minification.</p>
+          </div>
+        </details>
+
+        <details class="faq-card">
+          <summary class="faq-question">
+            <span>Is PixelSlim 100% offline and private?</span>
+            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. PixelSlim operates completely offline with zero telemetry, zero analytics, and zero cloud uploads.
+              Your images, personal photos, and sensitive company assets never leave your computer. Furthermore,
+              PixelSlim automatically strips sensitive EXIF metadata and GPS location coordinates from processed files.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-card">
+          <summary class="faq-question">
+            <span>Does it support Apple Silicon (M1/M2/M3/M4) and Intel Macs?</span>
+            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. PixelSlim is distributed as a Universal DMG containing a native fat binary for both Apple Silicon
+              (ARM64) and Intel (x86_64) architectures. It runs at peak native speed on all modern macOS machines
+              running macOS 11.0 Big Sur or later.</p>
+          </div>
+        </details>
+
+        <details class="faq-card">
+          <summary class="faq-question">
+            <span>How much does PixelSlim cost, and what is its license?</span>
+            <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>PixelSlim is 100% free and open-source software published under the MIT license.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <span>Crafted with ⚡ by <a href="https://zeospec.com/" target="_blank" rel="noopener noreferrer"
+          class="author-link">ZeoSpec</a> and the AI Agents (ft. Gemini)</span>
+      <span class="credit-dot">•</span>
+      <span>MIT License</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
